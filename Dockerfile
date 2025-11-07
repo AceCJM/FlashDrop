@@ -21,7 +21,8 @@ COPY src/ /var/www/html/
 # Create uploads directory and set permissions
 RUN mkdir -p /var/www/uploads \
     && chown -R www-data:www-data /var/www/uploads \
-    && chmod 755 /var/www/uploads
+    && chmod 755 /var/www/uploads \
+    && cp /var/www/html/example.env.php /var/www/html/env.php
 
 # Expose default HTTP port
 EXPOSE 80
