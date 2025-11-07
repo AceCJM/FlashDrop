@@ -2,7 +2,7 @@
 // src/index.php - Basic upload form and handler (refactored)
 
 // Load environment variables
-require_once __DIR__ . '/env.php';
+require_once 'env.php';
 
 // Start session early (needed for storing one-time links)
 if (session_status() === PHP_SESSION_NONE) {

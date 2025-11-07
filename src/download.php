@@ -1,7 +1,7 @@
 <?php
 // src/download.php - Handle file download and deletion
 // Load environment variables
-require_once __DIR__ . '/env.php';
+require_once 'env.php';
 global $UPLOAD_DIR;
 session_start();
 // Check if 'id' parameter is provided
