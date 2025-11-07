@@ -1,3 +1,3 @@
 <?php
-$DOMAIN = 'http://yourdomain.com';
-$UPLOAD_DIR = __DIR__ . '/../uploads/';
+$DOMAIN = getenv('DOMAIN') ?: 'http://yourdomain.com';
+$UPLOAD_DIR = getenv('UPLOAD_DIR') ?: __DIR__ . '/../uploads/';
