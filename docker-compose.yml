@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  flashdrop:
+    build: .
+    container_name: flashdrop_app
+    ports:
+      - "8080:80"
+    environment:
+      - DOMAIN=http://localhost:8080
+      - UPLOAD_DIR=/var/www/uploads/
+    volumes:
+      - ./uploads:/var/www/uploads
+      - ./src:/var/www/html:ro
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:80/" ]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+

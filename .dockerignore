@@ -1,0 +1,21 @@
+# Ignore local uploads and runtime files
+uploads/
+.env
+*.log
+
+# Git and editor files
+.git
+.gitignore
+.vscode/
+.idea/
+
+# Dependency folders
+node_modules/
+vendor/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Dockerfile and compose are small; keep them
+
